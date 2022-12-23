@@ -1,0 +1,45 @@
+
+body{
+    background: linear-gradient(to right, #0f2027,);
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(73, 105, 247);
+}
+
+#form{
+    width: 600px;
+    margin: 60pv auto 0 auto;
+    padding: 50px;
+    background-color:whitesmoke ;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+#form h1{
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button{
+    padding: 15px;
+    margin-top:10px;
+    width: 40%;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 100px;
+    
+}
+
+.input-control input{
+    border: 2px solid rgb(73, 105, 247);
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control span{
+color: red;
+font-size: 10px;
+}

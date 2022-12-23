@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rez</title>
+    <link rel="stylesheet" href="rezervimi1/rez.css">
+</head>
+<body style="background-color: #141a34;">
+    <center><h1 style="color: aqua;">Rezervimi</h1></center>
+    <div class="container">
+        <form>
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Type ur name" id="nameS">
+            </div>
+
+            <div class="input-group">
+                <label>Numri i telefonit</label>
+                <input type="number" placeholder="Entry your personal number" id="numriS">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email"placeholder="Entry your email" id="emailS">
+            </div>
+
+            <div class="input-group">
+                <label >Message</label>
+                <textarea rows="3" placeholder="Mesazhi per revervim (deri ne 5 kompjutera mund te rezervohet)." id="mesageS"></textarea>
+            </div>
+            <button onclick="val()">Sumbit</button>
+            <a href="afk.html" style="text-decoration: none;color: black;">Back</a>
+        </form>
+    </div>
+    <script src="javaS/jRez.js"></script>
+</body>
+</html>

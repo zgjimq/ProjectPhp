@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+.about{
+    
+    background-size: 55%;
+    background-color: cornflowerblue;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.PjesaTxt{
+    width: 35%;
+    float: right;
+    background-color: lightcoral;
+    padding: 104px;
+    box-shadow: 12px 12px 8px rgb(0, 0,0,0.3);
+}
+
+.PjesaTxt h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 19px;
+    color: lightblue;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.but button{
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    width: 200px;
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
