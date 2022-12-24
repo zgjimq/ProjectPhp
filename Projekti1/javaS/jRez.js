@@ -14,10 +14,10 @@ function valido (){
 */
 
 function val(){
-    let emri = document.getElementById("nameS").value;
-    let nr= document.getElementById("numriS").value;
-    let email= document.getElementById("emailS").value;
-    let mesazhi= document.getElementById("mesageS").value;
+    var emri = document.getElementById("nameS").value;
+    var nr= document.getElementById("numriS").value;
+    var email= document.getElementById("emailS").value;
+    var mesazhi= document.getElementById("mesageS").value;
     var number = /[0-9]/;
     var upper  =/[A-Z]/;
     var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{3})$/;//Validim per numri e telefonit
