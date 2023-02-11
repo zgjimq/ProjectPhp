@@ -1,4 +1,3 @@
 <?php
-    $username = $_POST['user'];
-    $password = $_POST['pass'];
+   print_r($_POST);
 ?>
