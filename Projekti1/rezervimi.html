@@ -10,25 +10,25 @@
 <body style="background-color: #141a34;">
     <center><h1 style="color: aqua;">Rezervimi</h1></center>
     <div class="container">
-        <form>
+        <form action="test.php" method="post">
             <div class="input-group">
                 <label>Name</label>
-                <input type="text" placeholder="Type ur name" id="nameS">
+                <input type="text" placeholder="Type ur name" id="nameS" name="name">
             </div>
 
             <div class="input-group">
                 <label>Numri i telefonit</label>
-                <input type="number" placeholder="Entry your personal number" id="numriS">
+                <input type="number" placeholder="Entry your personal number" id="numriS" name="numriTEL">
             </div>
 
             <div class="input-group">
                 <label>Email</label>
-                <input type="email"placeholder="Entry your email" id="emailS">
+                <input type="email"placeholder="Entry your email" id="emailS" name="email">
             </div>
 
             <div class="input-group">
                 <label >Message</label>
-                <textarea rows="3" placeholder="Mesazhi per revervim (deri ne 5 kompjutera mund te rezervohet)." id="mesageS"></textarea>
+                <textarea rows="3" placeholder="Mesazhi per revervim (deri ne 5 kompjutera mund te rezervohet)." id="mesageS" name="message"></textarea>
             </div>
             <button onclick="val()">Sumbit</button>
             <a href="HomePage.html" style="text-decoration: none;color: black;">Back</a>
