@@ -52,6 +52,17 @@
         border-radius:500px;
         height: 36px;
        }
+       #regjistro{
+        color: blue;
+        font-style: oblique;
+        font-size: 20px;
+        border: 2px solid green;
+       }
+       #back{
+        font-size: 20px;
+        border: 2px solid green;
+        padding: 2px;
+       }
       
        
     </style>
@@ -62,7 +73,7 @@
         <label class="sm"> <a href="About.HTML" style="color: white;">About us</a> </label>
         
      <center> <div id="div2">
-        <h1  >Login form</h1>
+        <h1>Login form</h1>
         <form action="test.php" method="post">
         <br>
             <input class="User" id="Useri" type="email" placeholder="Enter email" name="user" required>  
@@ -74,8 +85,11 @@
             
             <button onclick="valido()" id="button">Submit</button>
             <br>
+            
+            <label id="back"><a href="HomePage.html" style="color: black;text-decoration: none;">Back</a></label>
             <br>
-            <label><a href="HomePage.html" style="color: black;text-decoration: none;">Back</a></label>
+            <br>
+            <label id="regjistro"><a href="regjistrimi.html" style="color: black;text-decoration: none;">Regjitro</a></label>
         </form>
     </div></center>
 </div>
