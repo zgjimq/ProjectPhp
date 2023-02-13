@@ -1,3 +1,41 @@
+<?php
+$eshte_valid=false;// e bejm per me shiku nese data e dhen nga useri jane te sakta
+if($_SERVER["REQUEST_METHOD"]==="POST"){//per me keqyr nese forma eshte bere sumbit
+                 //get           post  //mundemi me shiku request method
+    $mysqli = require __DIR__ . "/database.php";//fillojm duhet connektu ne databaz 
+
+    $sql = sprintf("SELECT * FROM user 
+                where email='%s'",// e insertojm direkt ne sql, masi eshte string duhet te perdorim ''
+                // per me insertu e perdorim sprint edhe e perdorim %s
+               $mysqli->real_escape_string( $_POST["email"])); //per me u be sigurt qe po provide nje sqp injecion attack 
+               //duhet me escape value qe vjen prej form
+
+   $result=$mysqli->query($sql); // per me ekzekutu qete sql e perdorim mysql->query($sql) dhe kjo kthen nje result object ata 
+   //e ruajm ne nje variabel
+   $user= $result->fetch_assoc();//per me marr data prej result object e thirrum fetch_assoc, kjo do te kthej nje rekord nese 
+   //nje eshte gjetur si nje associativ array.
+
+   
+  if($user){// e shikon a ka nje array of data edhe nuk eshte null 
+    //e nese gjehet nje redord per ate adres tanaj mund ta shikojm passwordin
+    if(password_verify($_POST["password"], $user["password_hash"])){// kjo e shikon a jane te njejt passwordat edhe kthen true ose flase
+            //die("Login successul");
+            session_start();
+            $_SESSION["user_id"]=$user["id"];
+
+            header("Location: index.php");
+            exit;
+    }
+  }
+   
+  $eshte_valid=true;// nese vjen deri ketu atehere gjithqka eshte mire tanaj posht e merr kete edhe e qet nese eshte valid ose jo
+   //var_dump($user);
+   //exit;
+ 
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +101,6 @@
         border: 2px solid green;
         padding: 2px;
        }
-      
        
     </style>
     </head>
@@ -73,19 +110,20 @@
         <label class="sm"> <a href="About.HTML" style="color: white;">About us</a> </label>
         
      <center> <div id="div2">
-        <h1>Login form</h1>
-        <form action="test.php" method="post">
+        <h1  >Login form</h1>
+        <form method="post">
+            <?php if($eshte_valid):?>
+                <em>Invalid login</em>
+            <?php endif; ?>    
         <br>
-            <input class="User" id="Useri" type="email" placeholder="Enter email" name="user" required>  
+            <input class="User" id="email" type="email" placeholder="Enter email" name="email" 
+            value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">  
             <br>
             <br>
-            <input class="User" id="Passi" type="password" placeholder="Enter password" name="pass" required>
+            <input class="User" id="password" type="password" placeholder="Enter password" name="password">
             <br>
+            <button onclick="valido()" id="button" name="sumbit">Submit</button>
             <br>
-            
-            <button onclick="valido()" id="button">Submit</button>
-            <br>
-            
             <label id="back"><a href="HomePage.html" style="color: black;text-decoration: none;">Back</a></label>
             <br>
             <br>

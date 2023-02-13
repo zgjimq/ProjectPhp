@@ -10,7 +10,7 @@
 <body>
     <center>
     <div class="container">
-        <form  id="form">
+        <form  id="form" action="t2.php" method="post" novalidate>
             <h1>Regjistrimi</h1>
             <div class="input-control">
                 <label for="username">Username</label>
@@ -32,9 +32,9 @@
                 <input type="password" id="password2"name="password2"placeholder="Type again password" required>
             </div>
             <br>
-            <button type="submit" onclick="valido()">Sumbit</button>
+            <button type="submit" onclick="valido()" name="sumbit">Sumbit</button>
             
-            <button><a href="Login.html" style="color: white;text-decoration: none;">Back</a></button>
+            <button><a href="Login.php" style="color: white;text-decoration: none;">Back</a></button>
             
         </form>
     </div></center>

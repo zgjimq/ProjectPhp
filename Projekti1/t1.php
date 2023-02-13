@@ -73,11 +73,13 @@ $sql= "INSERT INTO message(Emri, Numri, email, Mesazhi)
       //$name_error="Te lutem mbusheni emrin";
     } 
     if(strlen($message)<15){
-      die("Mesazhi duhet te jete me i madh")
+      die("Mesazhi duhet te jete me i madh");
     } 
 }
   
-
-  mysqli_stmt_execute($stmt);
-  echo "Rekodri eshte bere save";
+if(mysqli_stmt_execute($stmt)){
+  header("Location: rezerSucc.html");
+}
+ // mysqli_stmt_execute($stmt);
+  //echo "Rekodri eshte bere save";
 ?>
