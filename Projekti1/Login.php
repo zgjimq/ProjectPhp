@@ -122,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){//per me keqyr nese forma eshte bere sum
             <br>
             <input class="User" id="password" type="password" placeholder="Enter password" name="password">
             <br>
-            <button onclick="valido()" id="button" name="sumbit">Submit</button>
+            <button onclick="valido()" id="button" name="sumbit">Submitt</button>
             <br>
             <label id="back"><a href="HomePage.html" style="color: black;text-decoration: none;">Back</a></label>
             <br>
