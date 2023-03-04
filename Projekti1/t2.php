@@ -50,7 +50,7 @@
    if(! $stmt->prepare($sql)){
         die("Sql error");
    }
-   // nese dojm me testu mujm me ndrru ne rreshtin 42 "user" ne "users" dhe do na jep nje error qe nuk ekziston ky.
+   // nese dojm me testu mujm me ndrru ne rreshtin 43 "user" ne "users" dhe do na jep nje error qe nuk ekziston ky.
 
    $stmt->bind_param("sss",
                       $_POST["username"],
@@ -65,7 +65,7 @@
         if($mysqli->errno === 1062){
                 die("email taken");
         }else{
-            die($mysqli->error . " ". $mysqli.errno);
+            die($mysqli->error . " ". $mysqli->errno);
         }
 
    }
